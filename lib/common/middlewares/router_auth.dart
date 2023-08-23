@@ -18,6 +18,8 @@ class RouteAuthMiddleware extends GetMiddleware {
       return null;
     } else {
       Future.delayed(
+
+        
           Duration(seconds: 2), () => Get.snackbar("Tips", "Login expired, please login again!"));
       return RouteSettings(name: AppRoutes.SIGN_IN);
     }
